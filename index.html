@@ -50,10 +50,12 @@
           const root = ReactDOM.createRoot(app);
           root.render(<Header />); 
         </script> -->
+
 <!---------------------------------------------------------------------------->
+
         <!--Nesting components-->
         <!--create a new component called HomePage:-->
-        <script type="text/jsx">
+        <!-- <script type="text/jsx">
           const app = document.getElementById("app")
 
           function Header() {
@@ -66,7 +68,28 @@
 
           const root = ReactDOM.createRoot(app);
           root.render(<Header />); 
-        </script>
+        </script> -->
 
+<!---------------------------------------------------------------------------->
+        <!--Nest the <Header> component inside the new <HomePage> Component:-->
+          <script type="text/jsx">
+            const app = document.getElementById("app")
+
+            function Header() {
+              return <h1>Develop. Preview. Ship.</h1>;
+            }
+             
+            function HomePage() {
+              return (
+                <div>
+                  {/* Nesting the Header component */}
+                  <Header />
+                </div>
+              );
+            }
+             
+            const root = ReactDOM.createRoot(app);
+            root.render(<Header />);
+          </script>
     </body>
 </html>
