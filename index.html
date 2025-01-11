@@ -24,7 +24,7 @@
 
 <!--w01 - activity 3 - chapter 4-->
 
-<html>
+<!-- <html>
   <body>
     <div id="app"></div>
     <script src="unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
@@ -38,4 +38,18 @@
         app.appendChild(header); 
     </script>
   </body>
-</html>
+</html> -->
+
+<!-- remove the DOM methods and add the ReactDOM.createRoot() method  -->
+<html>
+    <body>
+      <div id="app"></div>
+      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+      <script>
+        const app = document.getElementById('app');
+        const root = ReactDOM.createRoot(app);
+        root.render(<h1>Develop. Preview. Ship.</h1>);
+      </script>
+    </body>
+  </html>
