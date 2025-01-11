@@ -19,22 +19,38 @@
           root.render(<h1>Develop. Preview. Ship.</h1>);
         </script> -->
         <!--end - function that returns UI elements-->
-        
+<!---------------------------------------------------------------------------->
         <!--start - render the component to the DOM-->
 
-        <script type="text/jsx">
-          const app = document.getElementById("app")
+        <!-- <script type="text/jsx">
+          //const app = document.getElementById("app")
 
-          function header() {
-            return (<h1>Develop. Preview. Ship.</h1>)
-          }
+          //function header() {
+            //return (<h1>Develop. Preview. Ship.</h1>)
+          //}
 
-          const root = ReactDOM.createRoot(app);
-          root.render(header); 
-        </script>
+          //const root = ReactDOM.createRoot(app);
+         // root.render(header); 
+        </script> -->
 
         <!--end - render the component to the DOM-->
-        
+        <!--If you try to run the code above in your browser, you'll get an error-->
+<!----------------------------------------------------------------------------> 
+        <!--To get this to work, there are two things you have to do:-->
+        <!--First, React components should be capitalized to distinguish them from plain HTML and JavaScript:-->
+        <!--Second, you use React components the same way you'd use regular HTML tags, with angle brackets <>:-->
+        <script type="text/jsx">
+          const app = document.getElementById("app")
+          
+          function Header() {
+            return <h1>Develop. Preview. Ship.</h1>;
+          }
+           
+          const root = ReactDOM.createRoot(app);
+          root.render(<Header />); 
 
+
+
+        </script>
     </body>
 </html>
