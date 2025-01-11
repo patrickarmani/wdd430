@@ -6,7 +6,9 @@
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <!-- Babel Script -->
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <script type="text/jsx">
+
+        <!--start - function that returns UI elements-->
+        <!-- <script type="text/jsx">
           const app = document.getElementById("app")
          
           function header() {
@@ -15,7 +17,24 @@
          
           const root = ReactDOM.createRoot(app);
           root.render(<h1>Develop. Preview. Ship.</h1>);
-        </script>
+        </script> -->
+        <!--end - function that returns UI elements-->
         
+        <!--start - render the component to the DOM-->
+
+        <script type="text/jsx">
+          const app = document.getElementById("app")
+
+          function header() {
+            return (<h1>Develop. Preview. Ship.</h1>)
+          }
+
+          const root = ReactDOM.createRoot(app);
+          root.render(header); 
+        </script>
+
+        <!--end - render the component to the DOM-->
+        
+
     </body>
 </html>
