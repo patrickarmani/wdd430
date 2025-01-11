@@ -35,11 +35,12 @@
 
         <!--end - render the component to the DOM-->
         <!--If you try to run the code above in your browser, you'll get an error-->
+
 <!----------------------------------------------------------------------------> 
         <!--To get this to work, there are two things you have to do:-->
         <!--First, React components should be capitalized to distinguish them from plain HTML and JavaScript:-->
         <!--Second, you use React components the same way you'd use regular HTML tags, with angle brackets <>:-->
-        <script type="text/jsx">
+        <!-- <script type="text/jsx">
           const app = document.getElementById("app")
           
           function Header() {
@@ -48,9 +49,24 @@
            
           const root = ReactDOM.createRoot(app);
           root.render(<Header />); 
+        </script> -->
+<!---------------------------------------------------------------------------->
+        <!--Nesting components-->
+        <!--create a new component called HomePage:-->
+        <script type="text/jsx">
+          const app = document.getElementById("app")
 
+          function Header() {
+            return <h1>Develop. Preview. Ship. </h1>;
+          }
 
+          function HomePage() {
+            return <div></div>
+          }
 
+          const root = ReactDOM.createRoot(app);
+          root.render(<Header />); 
         </script>
+
     </body>
 </html>
