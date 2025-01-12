@@ -72,7 +72,7 @@
 
 <!---------------------------------------------------------------------------->
         <!--Nest the <Header> component inside the new <HomePage> Component:-->
-          <script type="text/jsx">
+          <!-- <script type="text/jsx">
             const app = document.getElementById("app")
 
             function Header() {
@@ -90,6 +90,27 @@
              
             const root = ReactDOM.createRoot(app);
             root.render(<Header />);
+          </script> -->
+<!---------------------------------------------------------------------------->
+<!--since <HomePage> is now your top-level component, you can pass it to the root.render() method:-->
+          <script type="textjsx">
+            const app = document.getElementById("app")
+
+            function Header() {
+              return <h1>Develop. Preview. Ship.</h1>;
+            }
+             
+            function HomePage() {
+              return (
+                <div>
+                  <Header />
+                </div>
+              );
+            }
+             
+            const root = ReactDOM.createRoot(app);
+            root.render(<HomePage />);
+
           </script>
     </body>
 </html>
